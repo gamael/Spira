@@ -19,11 +19,6 @@ class ProductosTVC: UITableViewController {
         interactor.viewDidUpdate(status: .didLoad)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        interactor.viewDidUpdate(status: .willAppear)
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -11,6 +11,6 @@ struct Configuration {
     private init() {}
     struct API {
         private init() {}
-        static let apiURL = "https://fakestoreapi.com/products"
+        static let apiURL = "https://fakestoreapi.com/"
     }
 }

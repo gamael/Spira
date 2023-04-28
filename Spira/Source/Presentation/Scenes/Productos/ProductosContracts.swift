@@ -11,6 +11,8 @@ protocol ProductosInteractor: SpiraInteractor {
 
 protocol ProductosPresenter: SpiraPresenter {
     func prepareView()
+    func showError(_ error: ApiError)
+    func showData(_ productos: [Producto])
 }
 
 protocol ProductosView: SpiraView {

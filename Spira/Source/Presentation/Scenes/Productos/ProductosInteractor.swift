@@ -26,6 +26,7 @@ class ProductosInteractorImpl: ProductosInteractor {
         switch status {
         case .didLoad:
             presenter.prepareView()
+            fetchData()
         default:
             break
         }
@@ -33,5 +34,25 @@ class ProductosInteractorImpl: ProductosInteractor {
     
     func didTapProduct(index: Int) {
         
+    }
+}
+
+extension ProductosInteractorImpl {
+    fileprivate func fetchData() {
+        presenter.showLoader()
+        let productosRequest = ProductosRequest()
+        Task {
+            presenter.hideLoader()
+            let requestResult = await dependencies.defaultRepository.execute(request: productosRequest)
+            switch requestResult {
+            case .success(let response):
+                let productos = response.map { productoDTO in
+                    productoDTO.toEntity()
+                }
+                presenter.showData(productos)
+            case .failure(let error):
+                presenter.showError(error)
+            }
+        }
     }
 }
