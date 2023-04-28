@@ -17,3 +17,15 @@ extension ProductoDTO {
             image: self.image)
     }
 }
+
+
+extension Producto {
+    func toCellViewModel() -> ProductosCellViewModel {
+        let pc: ProductosCellViewModelImpl = .init(
+            productName: self.title,
+            productPrice: "\(self.price)",
+            productImage: self.image
+        )
+        return pc
+    }
+}

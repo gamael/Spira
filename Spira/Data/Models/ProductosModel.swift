@@ -34,6 +34,13 @@ struct Rate: Decodable {
 }
 
 struct Producto {
+    
+    struct ProductosCellViewModelImpl: ProductosCellViewModel {
+        var productName: String
+        var productPrice: String
+        var productImage: String
+    }
+    
     let title: String
     let price: Float
     let description: String
@@ -42,5 +49,19 @@ struct Producto {
 }
 
 struct ProductosViewModel {
+    let numberOfSections: Int
+    let numberOfRows: Int
+    let productosCellViewModel: [ProductosCellViewModel]
     
+    init() {
+        self.numberOfSections = 0
+        self.numberOfRows = 0
+        self.productosCellViewModel = [ProductosCellViewModel]()
+    }
+    
+    init(numberOfSections: Int, numberOfRows: Int, productosCellViewModel: [ProductosCellViewModel]) {
+        self.numberOfSections = numberOfSections
+        self.numberOfRows = numberOfRows
+        self.productosCellViewModel = productosCellViewModel
+    }
 }

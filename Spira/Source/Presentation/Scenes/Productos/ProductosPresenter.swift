@@ -48,6 +48,15 @@ class ProductosPresenterImpl: ProductosPresenter {
     }
     
     func showData(_ productos: [Producto]) {
-        
+        let pcvm = productos.map { producto in
+            producto.toCellViewModel()
+        }
+        //numberOfSections por defecto a uno ya que no se usan secciones en este ejemplo
+        let pVM: ProductosViewModel = .init(
+            numberOfSections: 1,
+            numberOfRows: productos.count,
+            productosCellViewModel: pcvm
+        )
+        view.displayProductos(pVM)
     }
 }

@@ -7,16 +7,17 @@
 
 import UIKit
 
-protocol StandardTableViewCellViewModel {
-    var cellText: String { get }
-    var isSelected: Bool { get }
+protocol ProductosCellViewModel {
+    var productName: String { get }
+    var productPrice: String { get }
+    var productImage: String { get }
 }
 
 class ProductosCell: UITableViewCell {
     
     struct Constants {
         static let reuseIdentifier = "productosCellIdentifier"
-        static let nibName = "ProductosTableViewCell"
+        static let nibName = "ProductosCell"
     }
 
     override func awakeFromNib() {
@@ -29,7 +30,8 @@ class ProductosCell: UITableViewCell {
         accessoryType = selected ? .checkmark : .none
     }
     
-    func setupCell(_ viewModel: StandardTableViewCellViewModel) {
-        textLabel?.text = viewModel.cellText
+    func setupCell(_ viewModel: ProductosCellViewModel) {
+        textLabel?.text = viewModel.productName
+        detailTextLabel?.text = viewModel.productPrice
     }
 }

@@ -16,6 +16,7 @@ protocol ProductosPresenter: SpiraPresenter {
 }
 
 protocol ProductosView: SpiraView {
+    func displayProductos(_ productosViewModel: ProductosViewModel )
 }
 
 protocol ProductosWireframe: SpiraWireframe {
