@@ -10,6 +10,7 @@ import Foundation
 extension ProductoDTO {
     func toEntity() -> Producto {
         return .init(
+            id: self.id,
             title: self.title,
             price: self.price,
             description: self.description,

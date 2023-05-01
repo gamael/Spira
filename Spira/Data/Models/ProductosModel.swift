@@ -40,7 +40,7 @@ struct Producto {
         var productPrice: String
         var productImage: String
     }
-    
+    let id: Int
     let title: String
     let price: Float
     let description: String

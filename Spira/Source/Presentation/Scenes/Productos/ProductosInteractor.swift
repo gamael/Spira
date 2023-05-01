@@ -15,7 +15,11 @@ class ProductosInteractorImpl: ProductosInteractor {
     
     let presenter: ProductosPresenter
     let dependencies: Dependencies
-    var productos = [Producto]()
+    var productos = [Producto]() {
+        didSet {
+            NotificationManager.shared.productos = productos
+        }
+    }
     
     init(presenter: ProductosPresenter, depedencies: Dependencies) {
         self.presenter = presenter

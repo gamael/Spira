@@ -38,6 +38,7 @@
 		D99A21A029FF623B00758213 /* DetalleProductoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99A219E29FF623B00758213 /* DetalleProductoVC.swift */; };
 		D99A21A129FF623B00758213 /* DetalleProductoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D99A219F29FF623B00758213 /* DetalleProductoVC.xib */; };
 		D99A21A429FF669F00758213 /* DetalleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99A21A329FF669F00758213 /* DetalleConfigurator.swift */; };
+		D99A21A629FF8B1100758213 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99A21A529FF8B1100758213 /* NotificationsManager.swift */; };
 		D9A6B5E129FB943A0061A2FC /* ProductosMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6B5E029FB943A0061A2FC /* ProductosMapper.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		D99A219E29FF623B00758213 /* DetalleProductoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleProductoVC.swift; sourceTree = "<group>"; };
 		D99A219F29FF623B00758213 /* DetalleProductoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleProductoVC.xib; sourceTree = "<group>"; };
 		D99A21A329FF669F00758213 /* DetalleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleConfigurator.swift; sourceTree = "<group>"; };
+		D99A21A529FF8B1100758213 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		D99A21A729FF8F0500758213 /* Spira.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spira.entitlements; sourceTree = "<group>"; };
 		D9A6B5E029FB943A0061A2FC /* ProductosMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductosMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +111,7 @@
 		D97E2D0029FA4C1A00FC5A3C /* Spira */ = {
 			isa = PBXGroup;
 			children = (
+				D99A21A729FF8F0500758213 /* Spira.entitlements */,
 				D97E2D4229FA558600FC5A3C /* App */,
 				D97E2D3829FA4F8200FC5A3C /* Data */,
 				D97E2D1829FA4CD600FC5A3C /* Source */,
@@ -234,6 +238,7 @@
 				D97E2D0129FA4C1A00FC5A3C /* AppDelegate.swift */,
 				D97E2D0329FA4C1A00FC5A3C /* SceneDelegate.swift */,
 				D97E2D4829FA564D00FC5A3C /* Configuration.swift */,
+				D99A21A529FF8B1100758213 /* NotificationsManager.swift */,
 				D97E2D4329FA559900FC5A3C /* Modules */,
 			);
 			path = App;
@@ -356,6 +361,7 @@
 				D97E2D3729FA4F2E00FC5A3C /* UIViewController+Extension.swift in Sources */,
 				D97E2D5129FA575400FC5A3C /* ProductosCell.swift in Sources */,
 				D99A21A429FF669F00758213 /* DetalleConfigurator.swift in Sources */,
+				D99A21A629FF8B1100758213 /* NotificationsManager.swift in Sources */,
 				D97E2D3B29FA4F9E00FC5A3C /* Models.swift in Sources */,
 				D97E2D2629FA4D3700FC5A3C /* ProductosInteractor.swift in Sources */,
 				D97E2D2F29FA4E5F00FC5A3C /* Configurator.swift in Sources */,
@@ -513,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Spira/Spira.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -539,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Spira/Spira.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
