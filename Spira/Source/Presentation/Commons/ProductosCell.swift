@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 protocol ProductosCellViewModel {
     var productName: String { get }
@@ -32,5 +33,8 @@ class ProductosCell: UITableViewCell {
     func setupCell(_ viewModel: ProductosCellViewModel) {
         cellLabel1.text = viewModel.productName
         cellLabel2.text = "$ " + viewModel.productPrice
+        if let url = URL(string: viewModel.productImage) {
+            cellImageView.af.setImage(withURL: url)
+        }
     }
 }

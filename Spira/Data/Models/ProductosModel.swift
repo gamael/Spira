@@ -57,12 +57,12 @@ struct ProductosViewModel {
     init() {
         self.numberOfSections = 0
         self.numberOfRows = 0
-        self.defaultHeight = 150
+        self.defaultHeight = 125
         self.productosCellViewModel = [ProductosCellViewModel]()
     }
     
     init(numberOfSections: Int, numberOfRows: Int, productosCellViewModel: [ProductosCellViewModel]) {
-        self.defaultHeight = 150
+        self.defaultHeight = 125
         self.numberOfSections = numberOfSections
         self.numberOfRows = numberOfRows
         self.productosCellViewModel = productosCellViewModel
