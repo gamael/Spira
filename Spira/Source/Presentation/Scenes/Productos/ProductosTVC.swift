@@ -39,6 +39,10 @@ class ProductosTVC: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         interactor.didTapProduct(index: indexPath.row)
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.defaultHeight
+    }
 }
 
 extension ProductosTVC: ProductosView {

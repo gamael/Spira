@@ -15,6 +15,11 @@ protocol ProductosCellViewModel {
 
 class ProductosCell: UITableViewCell {
     
+    @IBOutlet weak var cellImageView: UIImageView!
+    @IBOutlet weak var cellLabel1: UILabel!
+    @IBOutlet weak var cellLabel2: UILabel!
+    
+    
     struct Constants {
         static let reuseIdentifier = "productosCellIdentifier"
         static let nibName = "ProductosCell"
@@ -22,16 +27,10 @@ class ProductosCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        accessoryType = .checkmark
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        accessoryType = selected ? .checkmark : .none
     }
     
     func setupCell(_ viewModel: ProductosCellViewModel) {
-        textLabel?.text = viewModel.productName
-        detailTextLabel?.text = "$ " + viewModel.productPrice
+        cellLabel1.text = viewModel.productName
+        cellLabel2.text = "$ " + viewModel.productPrice
     }
 }

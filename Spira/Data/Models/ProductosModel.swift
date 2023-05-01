@@ -51,15 +51,18 @@ struct Producto {
 struct ProductosViewModel {
     let numberOfSections: Int
     let numberOfRows: Int
+    let defaultHeight: CGFloat
     let productosCellViewModel: [ProductosCellViewModel]
     
     init() {
         self.numberOfSections = 0
         self.numberOfRows = 0
+        self.defaultHeight = 150
         self.productosCellViewModel = [ProductosCellViewModel]()
     }
     
     init(numberOfSections: Int, numberOfRows: Int, productosCellViewModel: [ProductosCellViewModel]) {
+        self.defaultHeight = 150
         self.numberOfSections = numberOfSections
         self.numberOfRows = numberOfRows
         self.productosCellViewModel = productosCellViewModel
