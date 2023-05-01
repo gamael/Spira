@@ -13,6 +13,7 @@ protocol ProductosPresenter: SpiraPresenter {
     func prepareView()
     func showError(_ error: ApiError)
     func showData(_ productos: [Producto])
+    func showDetalle(_ producto: Producto)
 }
 
 protocol ProductosView: SpiraView {
@@ -20,5 +21,5 @@ protocol ProductosView: SpiraView {
 }
 
 protocol ProductosWireframe: SpiraWireframe {
-    
+    func navigateToDetalle(producto: Producto)
 }

@@ -8,5 +8,10 @@
 import Foundation
 
 extension ProductosTVC: ProductosWireframe {
+    func navigateToDetalle(producto: Producto) {
+        let vc = DetalleConfigurator.shared.getScene(with: producto)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func dismissCurrentScene() {}
 }

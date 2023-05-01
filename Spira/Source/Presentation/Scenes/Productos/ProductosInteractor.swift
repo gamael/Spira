@@ -15,7 +15,7 @@ class ProductosInteractorImpl: ProductosInteractor {
     
     let presenter: ProductosPresenter
     let dependencies: Dependencies
-    
+    var productos = [Producto]()
     
     init(presenter: ProductosPresenter, depedencies: Dependencies) {
         self.presenter = presenter
@@ -33,7 +33,8 @@ class ProductosInteractorImpl: ProductosInteractor {
     }
     
     func didTapProduct(index: Int) {
-        
+        let producto = productos[index]
+        presenter.showDetalle(producto)
     }
 }
 
@@ -49,6 +50,7 @@ extension ProductosInteractorImpl {
                 let productos = response.map { productoDTO in
                     productoDTO.toEntity()
                 }
+                self.productos = productos
                 presenter.showData(productos)
             case .failure(let error):
                 presenter.showError(error)

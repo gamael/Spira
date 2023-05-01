@@ -59,4 +59,8 @@ class ProductosPresenterImpl: ProductosPresenter {
         )
         view.displayProductos(pVM)
     }
+    
+    func showDetalle(_ producto: Producto) {
+        wireframe.navigateToDetalle(producto: producto)
+    }
 }

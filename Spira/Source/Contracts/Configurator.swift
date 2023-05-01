@@ -15,7 +15,6 @@ protocol SpiraConfigurator {
     func setup(inputParams: Any?, delegate: Any?, forViewController viewController: UIViewController)
     func xibName() -> String
     func isValid(viewController: UIViewController) -> Bool
-//    func viewType<T>() -> T.Type
 }
 
 // MARK: - Protocol extension to provide a default implementation for some methods.
