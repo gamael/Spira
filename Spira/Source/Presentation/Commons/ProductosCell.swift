@@ -32,6 +32,6 @@ class ProductosCell: UITableViewCell {
     
     func setupCell(_ viewModel: ProductosCellViewModel) {
         textLabel?.text = viewModel.productName
-        detailTextLabel?.text = viewModel.productPrice
+        detailTextLabel?.text = "$ " + viewModel.productPrice
     }
 }
